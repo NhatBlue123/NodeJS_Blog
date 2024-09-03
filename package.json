@@ -1,0 +1,32 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NhatBlue123/NodeJS_Blog.git"
+  },
+  "keywords": [
+    "blue",
+    "nodejs",
+    "blog"
+  ],
+  "author": "nhatblue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NhatBlue123/NodeJS_Blog/issues"
+  },
+  "homepage": "https://github.com/NhatBlue123/NodeJS_Blog#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "install": "^0.13.0",
+    "nodemon": "^3.1.4"
+  }
+}
