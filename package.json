@@ -24,12 +24,16 @@
   },
   "homepage": "https://github.com/NhatBlue123/NodeJS_Blog#readme",
   "dependencies": {
+    "chokidar": "^3.6.0",
     "express": "^4.19.2",
-    "express-handlebars": "^8.0.1"
+    "express-handlebars": "^8.0.1",
+    "node-sass-middleware": "^1.1.0"
   },
   "devDependencies": {
     "install": "^0.13.0",
     "morgan": "^1.10.0",
-    "nodemon": "^3.1.4"
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.1.4",
+    "sass": "^1.78.0"
   }
 }
