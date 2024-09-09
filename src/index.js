@@ -33,7 +33,7 @@ chokidar.watch(path.join(__dirname, 'resources/scss/**/*.scss')).on('change', ()
 });
 
 // HTTP Logger
-app.use(morgan('combined'));
+// app.use(morgan('combined'));
 
 // Template engine
 const hbs = createHandlebars({
@@ -51,6 +51,10 @@ app.get('/', (req, res) => {
 app.get('/news', (req, res) => {
   res.render('news');  // Render view "news.hbs"
 }); 
+
+app.get('/search', (req, res) =>{
+  res.render('search');
+});
 
 // Start server
 app.listen(port, () => {
