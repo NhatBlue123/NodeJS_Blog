@@ -1,11 +1,12 @@
 import express from 'express';
 import path from 'path';
-import morgan from 'morgan';
 import * as sass from 'sass'; 
 import { fileURLToPath } from 'url';
 import { create as createHandlebars } from 'express-handlebars';
 import fs from 'fs';
 import chokidar from 'chokidar';
+
+import route from './routes/index.js';
 
 const app = express();
 const port = 8000;
@@ -15,6 +16,12 @@ const __dirname = path.dirname(__filename);
 
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(express.urlencoded({
+  extended: true
+}));
+
+app.use(express.json());
 
 // Function to compile SCSS to CSS
 const compileSCSS = () => {
@@ -43,18 +50,8 @@ app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources/views'));  // Thư mục chứa views
 
-// Routes
-app.get('/', (req, res) => {
-  res.render('home');  // Render view "home.hbs"
-});
-
-app.get('/news', (req, res) => {
-  res.render('news');  // Render view "news.hbs"
-}); 
-
-app.get('/search', (req, res) =>{
-  res.render('search');
-});
+// Routes init
+route(app);
 
 // Start server
 app.listen(port, () => {
