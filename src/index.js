@@ -7,8 +7,7 @@ import fs from "fs";
 import chokidar from "chokidar";
 
 import route from "./routes/index.js";
-
-       const app = express();
+const app = express();
 const port = 8000;
 
 const __filename = fileURLToPath(import.meta.url);
