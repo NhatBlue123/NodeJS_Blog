@@ -39,6 +39,7 @@
     "node-sass-middleware": "^1.1.0"
   },
   "devDependencies": {
+    "husky": "^9.1.6",
     "install": "^0.13.0",
     "morgan": "^1.10.0",
     "node-sass": "^9.0.0",
