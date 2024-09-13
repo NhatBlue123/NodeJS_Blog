@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
+    "beautiful": "lint-staged",
     "start": "nodemon --inspect src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,6 +24,14 @@
     "url": "https://github.com/NhatBlue123/NodeJS_Blog/issues"
   },
   "homepage": "https://github.com/NhatBlue123/NodeJS_Blog#readme",
+  "lint-staged": {
+    "'src/**/*{js,json,scss,html}'": "prettier docs package.json --write --tab-width 4 --single-quote --trailing-comma all"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "chokidar": "^3.6.0",
     "express": "^4.19.2",
