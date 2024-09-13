@@ -5,10 +5,9 @@ import { fileURLToPath } from "url";
 import { create as createHandlebars } from "express-handlebars";
 import fs from "fs";
 import chokidar from "chokidar";
-
 import route from "./routes/index.js";
-const app = express();
-const port = 8000;
+                                   const app = express();
+                          const port = 8000;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

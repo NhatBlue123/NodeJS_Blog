@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/NhatBlue123/NodeJS_Blog#readme",
   "lint-staged": {
-    "src/**/*{js,json,scss,html}": "prettier docs package.json --write --tab-width 4 --single-quote --trailing-comma all"
+    "src/**/*{js,json,scss,html}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
   },
   "husky": {
     "hooks": {
@@ -41,9 +41,11 @@
   "devDependencies": {
     "husky": "^9.1.6",
     "install": "^0.13.0",
+    "lint-staged": "^15.2.10",
     "morgan": "^1.10.0",
     "node-sass": "^9.0.0",
     "nodemon": "^3.1.4",
+    "prettier": "^3.3.3",
     "sass": "^1.78.0"
   }
 }
